@@ -19,7 +19,7 @@ final class AuthManager {
         let base = "https://accounts.spotify.com/authorize"
         let redirectURI = "https://github.com/swifterios"
         let scopes = "user-read-private"
-        let fullURL = "\(base)?response_type=code&client_id=\(Constants.cliendID)&scope=\(scopes)&redirect_uri=\(redirectURI)"
+        let fullURL = "\(base)?response_type=code&client_id=\(Constants.cliendID)&scope=\(scopes)&redirect_uri=\(redirectURI)&show_dialog=TRUE"
         
         return URL(string: fullURL)
     }
@@ -44,5 +44,17 @@ final class AuthManager {
     
     private var shouldRefreshToken: Bool {
         return false
+    }
+    
+    public func exchangeCodeForToken(code: String, completion: @escaping (Bool) -> Void) {
+        
+    }
+    
+    public func refreshAccessToken() {
+        
+    }
+    
+    private func cacheToken() {
+        
     }
 }
