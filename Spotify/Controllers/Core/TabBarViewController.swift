@@ -24,7 +24,6 @@ class TabBarViewController: UITabBarController {
         vc2.navigationItem.largeTitleDisplayMode = .always
         vc3.navigationItem.largeTitleDisplayMode = .always
         
-        
         let nav1 = UINavigationController(rootViewController: vc1)
         nav1.navigationBar.prefersLargeTitles = true
         let nav2 = UINavigationController(rootViewController: vc2)
