@@ -22,6 +22,9 @@
 		EC05F9C726B2B97E004DFF69 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05F9C626B2B97E004DFF69 /* PlayerViewController.swift */; };
 		EC05F9C926B2B9A3004DFF69 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05F9C826B2B9A3004DFF69 /* PlaylistViewController.swift */; };
 		EC05F9CC26B2B9C8004DFF69 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05F9CB26B2B9C8004DFF69 /* SearchResultsViewController.swift */; };
+		EC05F9CE26B2BA2D004DFF69 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05F9CD26B2BA2D004DFF69 /* AuthManager.swift */; };
+		EC05F9D026B2BA42004DFF69 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05F9CF26B2BA42004DFF69 /* APICaller.swift */; };
+		EC05F9D226B2BA61004DFF69 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05F9D126B2BA61004DFF69 /* HapticsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		EC05F9C626B2B97E004DFF69 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		EC05F9C826B2B9A3004DFF69 /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		EC05F9CB26B2B9C8004DFF69 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		EC05F9CD26B2BA2D004DFF69 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		EC05F9CF26B2BA42004DFF69 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		EC05F9D126B2BA61004DFF69 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,9 @@
 		EC05F9B426B2B5AB004DFF69 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				EC05F9CD26B2BA2D004DFF69 /* AuthManager.swift */,
+				EC05F9CF26B2BA42004DFF69 /* APICaller.swift */,
+				EC05F9D126B2BA61004DFF69 /* HapticsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -228,10 +237,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC05F9B926B2B849004DFF69 /* SearchViewController.swift in Sources */,
+				EC05F9CE26B2BA2D004DFF69 /* AuthManager.swift in Sources */,
 				EC05F9CC26B2B9C8004DFF69 /* SearchResultsViewController.swift in Sources */,
 				EC05F9C126B2B8C5004DFF69 /* WelcomeViewController.swift in Sources */,
 				EC05F9C526B2B93F004DFF69 /* ProfileViewController.swift in Sources */,
 				EC05F9B726B2B7D9004DFF69 /* TabBarViewController.swift in Sources */,
+				EC05F9D226B2BA61004DFF69 /* HapticsManager.swift in Sources */,
 				EC05F9A126B2B474004DFF69 /* HomeViewController.swift in Sources */,
 				EC05F9BF26B2B8AF004DFF69 /* AuthViewController.swift in Sources */,
 				EC05F99D26B2B474004DFF69 /* AppDelegate.swift in Sources */,
@@ -239,6 +250,7 @@
 				EC05F9C926B2B9A3004DFF69 /* PlaylistViewController.swift in Sources */,
 				EC05F99F26B2B474004DFF69 /* SceneDelegate.swift in Sources */,
 				EC05F9C726B2B97E004DFF69 /* PlayerViewController.swift in Sources */,
+				EC05F9D026B2BA42004DFF69 /* APICaller.swift in Sources */,
 				EC05F9C326B2B8EA004DFF69 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
