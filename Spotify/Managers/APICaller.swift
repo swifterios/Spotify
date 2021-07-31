@@ -12,16 +12,43 @@ final class APICaller {
     
     private init() {}
     
+    struct Constants {
+        static let baseAPIURL = "https://api.spotify.com/v1"
+    }
+    
     public func getCurrentUserProfile(completion: @escaping (Result<UserProfile, Error>) -> Void) {
-        AuthManager.shared.withValidToken { token in
-            
+        createRequest(with: URL(string: Constants.baseAPIURL + "/me"),
+                      type: .GET) { baseRequest in
+            let task = URLSession.shared.dataTask(with: baseRequest) { data, _, error in
+                guard let data = data, error == nil else {
+                    completion(.failure(APIError.faileedToGetData))
+                    return
+                }
+                
+                do {
+                    let result = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                    print(result)
+                }
+                catch {
+                    completion(.failure(error))
+                }
+            }
+            task.resume()
         }
+    }
+    
+    //MARK: - Enums
+    
+    enum APIError: Error {
+        case faileedToGetData
     }
     
     enum HTTPMethod: String {
         case GET
         case POST
     }
+    
+    
     
     private func createRequest(with url: URL?,
                                type: HTTPMethod,
