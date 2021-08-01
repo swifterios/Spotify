@@ -62,8 +62,6 @@ final class AuthManager {
         
         // Get token
         
-        refreshingToken = true
-        
         var components = URLComponents()
         components.queryItems = [
             URLQueryItem(name: "grant_type", value: "authorization_code"),
@@ -109,21 +107,22 @@ final class AuthManager {
     
     private var onRefreshBlocks = [((String) -> Void)]()
     
-    public func withValidToken(complition: @escaping (String) -> Void) {
+    public func withValidToken(completion: @escaping (String) -> Void) {
         guard !refreshingToken else {
-            onRefreshBlocks.append(complition)
+            onRefreshBlocks.append(completion)
             return
         }
+        
         if shouldRefreshToken {
             refreshIfNeeded { [weak self] success in
                 if success {
                     if let token = self?.accessToken, success {
-                        complition(token)
+                        completion(token)
                     }
                 }
             }
         } else if let token = accessToken {
-            complition(token)
+            completion(token)
         }
     }
     
@@ -143,6 +142,8 @@ final class AuthManager {
         }
         
         // Refresh token
+        
+        refreshingToken = true
         
         var components = URLComponents()
         components.queryItems = [
@@ -178,7 +179,8 @@ final class AuthManager {
             
             do {
                 let result = try JSONDecoder().decode(AuthResponce.self, from: data)
-                self?.onRefreshBlocks.forEach{$0(result.access_token)}
+                print("Token updated")
+                self?.onRefreshBlocks.forEach{ $0(result.access_token) }
                 self?.onRefreshBlocks.removeAll()
                 self?.cacheToken(result: result)
                 completion(true)

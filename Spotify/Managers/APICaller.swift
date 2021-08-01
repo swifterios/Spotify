@@ -8,6 +8,7 @@
 import Foundation
 
 final class APICaller {
+    
     static let shared = APICaller()
     
     private init() {}
@@ -21,6 +22,7 @@ final class APICaller {
                       type: .GET) { baseRequest in
             let task = URLSession.shared.dataTask(with: baseRequest) { data, _, error in
                 guard let data = data, error == nil else {
+                    
                     completion(.failure(APIError.faileedToGetData))
                     return
                 }
@@ -37,19 +39,6 @@ final class APICaller {
         }
     }
     
-    //MARK: - Enums
-    
-    enum APIError: Error {
-        case faileedToGetData
-    }
-    
-    enum HTTPMethod: String {
-        case GET
-        case POST
-    }
-    
-    
-    
     private func createRequest(with url: URL?,
                                type: HTTPMethod,
                                completion: @escaping (URLRequest) -> Void){
@@ -63,5 +52,16 @@ final class APICaller {
             request.timeoutInterval = 30
             completion(request)
         }
+    }
+    
+    //MARK: - Enums
+    
+    enum APIError: Error {
+        case faileedToGetData
+    }
+    
+    enum HTTPMethod: String {
+        case GET
+        case POST
     }
 }
