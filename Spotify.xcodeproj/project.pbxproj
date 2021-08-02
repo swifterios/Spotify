@@ -31,6 +31,7 @@
 		EC05F9DC26B2BB53004DFF69 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05F9DB26B2BB53004DFF69 /* UserProfile.swift */; };
 		EC05F9DE26B2C9C9004DFF69 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05F9DD26B2C9C9004DFF69 /* Extensions.swift */; };
 		EC05F9E026B3005E004DFF69 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05F9DF26B3005E004DFF69 /* AuthResponse.swift */; };
+		EC05F9E226B7F340004DFF69 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05F9E126B7F340004DFF69 /* SettingsModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		EC05F9DB26B2BB53004DFF69 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		EC05F9DD26B2C9C9004DFF69 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EC05F9DF26B3005E004DFF69 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		EC05F9E126B7F340004DFF69 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				EC05F9D926B2BB44004DFF69 /* Artist.swift */,
 				EC05F9DB26B2BB53004DFF69 /* UserProfile.swift */,
 				EC05F9DF26B3005E004DFF69 /* AuthResponse.swift */,
+				EC05F9E126B7F340004DFF69 /* SettingsModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				EC05F9DE26B2C9C9004DFF69 /* Extensions.swift in Sources */,
 				EC05F9BB26B2B869004DFF69 /* LibraryViewController.swift in Sources */,
 				EC05F9DA26B2BB44004DFF69 /* Artist.swift in Sources */,
+				EC05F9E226B7F340004DFF69 /* SettingsModels.swift in Sources */,
 				EC05F9C926B2B9A3004DFF69 /* PlaylistViewController.swift in Sources */,
 				EC05F99F26B2B474004DFF69 /* SceneDelegate.swift in Sources */,
 				EC05F9C726B2B97E004DFF69 /* PlayerViewController.swift in Sources */,
